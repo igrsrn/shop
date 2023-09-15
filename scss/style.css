@@ -345,12 +345,13 @@ summary::-webkit-details-marker {
   background-color: transparent;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
+  background-color: rgba(32, 131, 226, 0.8);
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
-  /* display: none; */
   transform: scale(0);
   transition-duration: 0.7s;
+  border-radius: 15px;
 }
 
 .good__info__text {
@@ -386,6 +387,7 @@ summary::-webkit-details-marker {
   line-height: 19px;
   font-size: 16px;
   font-weight: 400;
+  border-radius: 15px;
   color: #F16D7F;
   transition-duration: 0.7s;
 }
@@ -433,7 +435,7 @@ summary::-webkit-details-marker {
 }
 
 .comments__background {
-  background-image: url(img/subscribe__background.jpg);
+  background-image: url(../img/subscribe__background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -726,6 +728,7 @@ summary::-webkit-details-marker {
   box-sizing: border-box;
   margin: 0 auto;
   transition-duration: 0.7s;
+  border-radius: 15px;
 }
 .buy__product:hover .product__btn {
   fill: white;
@@ -767,7 +770,7 @@ summary::-webkit-details-marker {
 }
 .catalog__block-box[open] > .catalog__block-title::after {
   color: #F16D7F;
-  content: url(img/filter__icon-red.svg);
+  content: url(../img/filter__icon-red.svg);
 }
 .catalog__block-option {
   display: flex;

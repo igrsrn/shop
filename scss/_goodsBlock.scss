@@ -101,12 +101,13 @@
     background-color: transparent;
     border: 1px solid #FFFFFF;
     color: #FFFFFF;
+    background-color: rgb(32 131 226 / 80%);;
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
-    /* display: none; */
     transform: scale(0);
     transition-duration: .7s;
+    border-radius: 15px;
 }
 
 .good__info__text {
@@ -136,6 +137,7 @@
     border: 1px solid $redText;
     padding: 15px 40px;
     @include fontStyle(19px, 16px, 400);
+    border-radius: 15px;
     color: $redText;
     transition-duration: .7s;
 }
