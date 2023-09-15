@@ -1,0 +1,36 @@
+.footer {
+    background-color: #222224;
+    padding: 24px 0;
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.copyright {
+    line-height: 19px;
+    color: #FBFBFB;
+}
+
+.social-network__list {
+    display: flex;
+    gap: 7px;
+}
+
+.social-network__link {
+    @include widthAndHeight(32px, 32px);
+    @include flex();
+    background-color: #FFFFFF;
+    transition-duration: .7s;
+}
+
+.social-network__link:hover {
+    background-color: #F16D7F;
+    fill: #FFFFFF;
+}
+
+.fab {
+    color: #000000;
+}

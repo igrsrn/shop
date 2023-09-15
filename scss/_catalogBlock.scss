@@ -1,0 +1,116 @@
+.catalog__block {
+    padding: 51px 0 96px;
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 64px;
+    }
+
+    &-filter {
+        @include fontStyle(16px, 14px, 600);
+        color: $blackColor;
+    }
+
+    &-box {
+        width: 360px;
+        position: relative;
+
+        &[open] > .catalog__block-title {
+            color: $redText;
+            position: relative;
+            z-index: 2;
+            top: 13px;
+            left: 16px;
+            &::after {
+                color: $redText;
+                content: url(img/filter__icon-red.svg);
+            }
+        }
+    }
+
+    &-option {
+        display: flex;
+        gap: 28px;
+    }
+
+    &-title {
+        &::after {
+            content: url(../img/filter__icon.svg);
+            margin-left: 11px;
+        } 
+    }
+
+    &-innerMenu {
+        position: absolute;
+        width: 363px;
+        padding: 45px 16px 17px 17px;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #FFF;
+        filter: drop-shadow(6px 4px 35px rgba(0, 0, 0, 0.21));
+    }
+
+    &-itemWrap:not(:last-child) {
+        margin-bottom: 18px;
+    }
+
+    &-item {
+        border-left: 5px solid $redText;
+        border-bottom: 1px solid #EBEBEB;
+        padding: 11px;
+    }
+
+    &-filterList {
+        padding-top: 12px;
+        padding-left: 17px;
+    }
+
+    &-filterItem:not(:last-child) {
+        margin-bottom: 11px;
+    }
+
+    &-filterLink {
+        @include fontStyle(16px, 14px, 400);
+        color: $grayLight;
+    }
+}
+
+.option__block {
+    position: relative;
+}
+
+.option__size {
+    position: absolute;
+    top: 23px;
+    left: -7px;
+    padding: 7px 9px 11px;
+    z-index: 1;
+    width: 79px;
+    background-color: #FFFFFF;
+    box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+}
+
+.option__item {
+    display: flex;
+    gap: 9px;
+    @include fontStyle(16px, 14px, 400);
+    color: $grayDark;
+    font-family: 'Roboto';
+
+    &:not(:last-child) {
+        margin-bottom: 6px;
+    }
+}
+
+.option__title {
+    @include fontStyle(16px, 14px, 400);
+    color: $grayLight;
+
+    &::after {
+        content: url(../img/arrow-down.svg);
+        margin-left: 10px;
+    }
+}

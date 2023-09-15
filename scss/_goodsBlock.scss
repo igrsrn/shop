@@ -1,0 +1,146 @@
+.goods {
+    padding-top: 65px;
+    padding-bottom: 60px;
+
+    &__block {
+        text-align: center;
+    }
+
+    &__info {
+        margin-bottom: 48px;
+    }
+
+    &__item:hover .good__img {
+        filter: brightness(40%);
+    }
+
+    &__item:hover .hover__btn {
+        transform: scale(1);
+    }
+
+    &__title {
+        margin-bottom: 6px;
+        @include fontStyle(36px, 30px, 400);
+        color: $blackColor;
+    }
+
+    &__subtitle {
+        @include fontStyle(16px, 14px, 400);
+        color: $grayLight;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-bottom: 48px;
+    }
+}
+
+.category {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 96px;
+
+    &__item {
+        position: relative;
+        @include flex();
+        text-align: center;
+
+        &:hover .category__img {
+            filter: brightness(40%);
+        }
+
+        // &:hover .good__img {
+        //     filter: brightness(40%);
+        // }
+    }
+
+    &__img {
+        width: 100%;
+        transition-duration: .7s;
+    }
+
+    &__description {
+        position: absolute;
+    }
+}
+
+.full {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.white {
+    @include fontStyle(19px, 16px, 400);
+    color: $whiteColor;
+}
+
+.big {
+    @include fontStyle(28px, 24px, 700);
+}
+
+.good__top {
+    position: relative;
+    @include flex();
+}
+
+.good__img {
+    display: flex;
+    width: 100%;
+    transition-duration: .7s;
+}
+
+.hover__btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 11px;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    /* display: none; */
+    transform: scale(0);
+    transition-duration: .7s;
+}
+
+.good__info__text {
+    padding: 24px 19px 16px;
+    background-color: #f8f8f8;
+    text-align: left;
+}
+
+.good__title {
+    margin-bottom: 16px;
+    @include fontStyle(15px, 13px, 400);
+    color: $blackColor;
+}
+
+.good__descr {
+    @include fontStyle(16px, 14px, 300);
+    color: $grayLight;
+    margin-bottom: 16px;
+}
+
+.good__price {
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.show__products {
+    border: 1px solid $redText;
+    padding: 15px 40px;
+    @include fontStyle(19px, 16px, 400);
+    color: $redText;
+    transition-duration: .7s;
+}
+
+.show__products:hover {
+    background-color: #F26376;
+    color: #FFFFFF;
+}

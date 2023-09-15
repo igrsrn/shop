@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.pink {
+    color: #F16D7F;
+}
+
+summary {
+    display: block;
+
+    &::-webkit-details-marker {
+        display: none;
+    }
+}

@@ -1,0 +1,31 @@
+.benefits__block {
+    background-color: #222224;
+    padding-top: 103px;
+    padding-bottom: 103px;
+}
+
+.benefits__parent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefits__item {
+    max-width: 340px;
+    text-align: center;
+}
+
+.benefits__img {
+    margin-bottom: 28px;
+    @include widthAndHeight(40px, 40px);
+}
+
+.benefits__title {
+    @include fontStyle(23px, 19px, 400);
+    color: $whiteColor;
+    margin-bottom: 16px;
+}
+
+.benefits__text {
+    @include fontStyle(16px, 13px, 300);
+    color: $whiteColor;
+}

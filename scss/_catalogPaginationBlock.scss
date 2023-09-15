@@ -1,0 +1,24 @@
+.catalogPagination {
+    @include widthAndHeight(284px, 44px);
+    margin: 0 auto;
+    border: 1px solid #ebebeb;
+    padding: 13px 16px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 3px;
+
+    &-link {
+        @include fontStyle(19px, 16px, 300);
+        color: $grayLight;
+        
+
+        &:hover {
+            color: $redText;
+            font-weight: 700;
+        }
+    }
+
+    &-active {
+        color: $redText;
+    }
+}

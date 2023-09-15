@@ -1,0 +1,249 @@
+@import 'baseStyle';
+@import 'textStyle';
+@import 'vars';
+@import 'widthHeight';
+@import 'absoluteStyle';
+@import 'flexCenter';
+@import 'headerBlock';
+@import 'promoBlock';
+@import 'goodsBlock';
+@import 'benefitsBlock';
+@import 'commentBlock';
+@import 'footerBlock';
+@import 'navBarBlock';
+@import 'carousel';
+@import 'productInfo';
+@import 'catalogBlock';
+@import 'catalogPaginationBlock';
+
+
+@media (max-width: 1160px) {
+    .nav__menu {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .poster {
+        background-position-x: center;
+    }
+
+    .goods {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .comment__glow {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .poster {
+        background-position-x: center;
+        background-size: cover;
+    }
+
+    .promo {
+        min-height: 367px;
+    }
+
+    .promo__right {
+        margin-left: 39px;
+    }
+
+    .promo__description {
+        min-height: 92px;
+    }
+
+    .promo__title {
+        font-size: 44px;
+    }
+
+    .promo__text {
+        font-size: 24px;
+    }
+
+    .goods {
+        padding-bottom: 70px;
+    }
+
+    .category {
+        gap: 18px;
+        margin-bottom: 109px;
+    }
+
+    .goods__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .benefits__block {
+        padding-top: 48px;
+        padding-bottom: 64px;
+    }
+
+    .benefits__parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+    }
+
+    .comment__parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+    }
+
+    .subscribe__info {
+        align-self: center;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .account, .cart {
+        display: none;
+    }
+
+    .poster {
+        transform: scale(0);
+        width: 0%;
+    }
+
+    .promo {
+        min-height: 363px;
+    }
+
+    .promo__right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .promo__description {
+        left: 0%;
+        top: 0%;
+        position: relative;
+        min-height: 66px;
+    }
+
+    .promo__title {
+        font-size: 38px;
+    }
+
+    .promo__text {
+        font-size: 20px;
+    }
+
+    .goods {
+        padding-top: 85px;
+        padding-bottom: 64px;
+    }
+
+    .category {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .full {
+        grid-column-start: auto;
+        grid-column-end: auto;
+    }
+
+    .goods__list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    .benefits__block {
+        padding-top: 48px;
+        padding-bottom: 81px;
+    }
+
+    .benefits__parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 46px;
+    }
+
+    .comment__glow {
+        padding-top: 64px;
+        padding-bottom: 109px;
+    }
+
+    .comment__parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 59px;
+    }
+
+    .comment__text {
+        font-size: 19px;
+        line-height: 22px;
+    }
+
+    .italic__info {
+        font-size: 18px;
+        line-height: 21px;
+    } 
+
+    .subscribe__info {
+        align-self: center;
+    }
+
+    .subscribe__title {
+        line-height: 36px;
+    }
+
+    .subscribe__text {
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 22px;
+    }
+
+    .email {
+        padding: 6px 20px;
+    }
+
+    .form__btn {
+        padding: 6px 7px;
+    }
+
+    .footer {
+        padding: 43px 0 9px;
+    }
+
+    .footer__info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+
+
+// .bread__crumbs-link {
+//     @include fontStyle('Lato', 16px, 14px);
+//     color: $grayLight;
+
+//     &::not(:last-child)::after {
+//         content: '/';
+//         margin-left: 5px;
+//         margin-right: 5px;
+//         color: $redText;
+//     }
+// }
+
+
+
+
+

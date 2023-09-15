@@ -1,0 +1,93 @@
+.product__block {
+    padding-bottom: 128px;
+}
+
+.product__descr {
+    border: 1px solid #EAEAEA;
+    padding: 65px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 128px;
+    position: relative;
+    z-index: 1;
+    margin-top: -65px;
+    background-color: white;
+}
+
+.product__descr-info {
+    max-width: 642px;
+}
+
+.product__category {
+    @include fontStyle(16px, 14px, 300);
+    color: $redText;
+
+    &:after {
+        content: "";
+        display: block;
+        width: 63px;
+        height: 3px;
+        background-color: #F16D7F;
+        margin: 12px auto;
+    }
+}
+
+.catalog__title {
+    @include fontStyle(21px, 18px, 300);
+    color: $grayDark;
+    margin-bottom: 48px;
+}
+
+.catalog__descr {
+    @include fontStyle(16px, 14px, 300);
+    color: $grayLight;
+    margin-bottom: 32px;
+}
+
+.catalog__price {
+    @include fontStyle(28px, 24px, 300);
+    color: $redText;
+
+    &::after {
+        content: '';
+        display: block;
+        height: 1px;
+        background-color: $whiteGray;
+        margin: 64px 0px;
+    }
+}
+
+.catalog__option {
+    display: flex;
+    justify-content: center;
+    gap: 23px;
+    margin-bottom: 48px;
+}
+
+.buy__product {
+    width: 212px;
+    padding: 15px 24px;
+    display: flex;
+    gap: 23px;
+    align-items: center;
+    background-color: transparent;
+    color: $redText;
+    border: 1px solid $redText;
+    box-sizing: border-box;
+    margin: 0 auto;
+    transition-duration: .7s;
+
+    &:hover .product__btn {
+        fill: white;
+    }
+
+    &:hover {
+        background-color: $redText;
+        color: white;
+    }
+}
+
+.product__btn {
+    fill: $redText;
+}
