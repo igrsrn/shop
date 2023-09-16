@@ -300,6 +300,7 @@ summary::-webkit-details-marker {
 .category__img {
   width: 100%;
   transition-duration: 0.7s;
+  border-radius: 15px;
 }
 .category__description {
   position: absolute;
@@ -334,6 +335,7 @@ summary::-webkit-details-marker {
   display: flex;
   width: 100%;
   transition-duration: 0.7s;
+  border-radius: 10px 10px 0 0;
 }
 
 .hover__btn {
@@ -345,7 +347,7 @@ summary::-webkit-details-marker {
   background-color: transparent;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
-  background-color: rgba(32, 131, 226, 0.8);
+  background-color: rgba(237, 18, 117, 0.6);
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
@@ -358,6 +360,7 @@ summary::-webkit-details-marker {
   padding: 24px 19px 16px;
   background-color: #f8f8f8;
   text-align: left;
+  border-radius: 0 0 10px 10px;
 }
 
 .good__title {
@@ -551,6 +554,7 @@ summary::-webkit-details-marker {
   align-items: center;
   background-color: #FFFFFF;
   transition-duration: 0.7s;
+  border-radius: 7px;
 }
 
 .social-network__link:hover {

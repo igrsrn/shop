@@ -60,6 +60,7 @@
     &__img {
         width: 100%;
         transition-duration: .7s;
+        border-radius: 15px;
     }
 
     &__description {
@@ -90,6 +91,7 @@
     display: flex;
     width: 100%;
     transition-duration: .7s;
+    border-radius: 10px 10px 0 0;
 }
 
 .hover__btn {
@@ -101,7 +103,7 @@
     background-color: transparent;
     border: 1px solid #FFFFFF;
     color: #FFFFFF;
-    background-color: rgb(32 131 226 / 80%);;
+    background-color: rgba(237, 18, 117, 0.6);
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
@@ -114,6 +116,7 @@
     padding: 24px 19px 16px;
     background-color: #f8f8f8;
     text-align: left;
+    border-radius: 0 0 10px 10px;
 }
 
 .good__title {

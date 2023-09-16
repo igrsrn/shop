@@ -24,6 +24,7 @@
     @include flex();
     background-color: #FFFFFF;
     transition-duration: .7s;
+    border-radius: 7px;
 }
 
 .social-network__link:hover {
