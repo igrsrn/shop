@@ -6,6 +6,10 @@
 @import 'commentBlock';
 @import 'footerBlock';
 
+.cartBlock {
+    padding: 96px 0 128px;
+}
+
 .cartBlock__shoppingItem {
     max-width: 652px;
 }
@@ -80,5 +84,13 @@
 
 .shoppingControls__btn {
     padding: 17px 40px;
-    border: 1px solid $grayDark;
+    border: 1px solid $gray;
+    background-color: transparent;
+    @include fontStyle(16px, 14px, 300);
+    transition-duration: .7s;
+
+    &:hover {
+        background-color: $redText;
+        color: $whiteColor;
+    }
 }
