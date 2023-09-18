@@ -5,3 +5,47 @@
 @import 'navBarBlock';
 @import 'commentBlock';
 @import 'footerBlock';
+
+.shoppingItem {
+    display: flex;
+    max-width: 652px;
+    max-height: 306px;
+    box-shadow: 25px 25px 25px lightgray;
+
+    &:first-child {
+        margin-bottom: 40px;
+    }
+
+    &__image {
+        max-width: 262px;
+
+        & > img {
+            height: 100%;
+        }
+    }
+
+    &__descr {
+        padding: 22px 31px 62px;
+        width: 100%;
+    }
+
+    &__title {
+        @include fontStyle(28px, 24px, 400);
+        color: $blackColor;
+        margin-bottom: 42px;
+    }
+
+    &__infoList {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        @include fontStyle(26px, 22px, 400);
+        color: $grayLight;
+    }
+
+    &__quantityField {
+        max-width: 45px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+}
