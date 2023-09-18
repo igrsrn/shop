@@ -389,6 +389,7 @@ summary::-webkit-details-marker {
 .shoppingItem__descr {
   padding: 22px 31px 62px;
   width: 100%;
+  position: relative;
 }
 .shoppingItem__title {
   line-height: 28px;
@@ -410,4 +411,16 @@ summary::-webkit-details-marker {
   max-width: 45px;
   padding-top: 1px;
   padding-bottom: 1px;
+}
+.shoppingItem__closeBtn {
+  position: absolute;
+  top: 28px;
+  right: 22px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
 }/*# sourceMappingURL=cartStyle.css.map */

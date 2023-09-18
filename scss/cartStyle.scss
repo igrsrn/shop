@@ -27,6 +27,7 @@
     &__descr {
         padding: 22px 31px 62px;
         width: 100%;
+        position: relative;
     }
 
     &__title {
@@ -47,5 +48,18 @@
         max-width: 45px;
         padding-top: 1px;
         padding-bottom: 1px;
+    }
+
+    &__closeBtn {
+        position: absolute;
+        top: 28px;
+        right: 22px;
+        width: 18px;
+        height: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: none;
     }
 }
