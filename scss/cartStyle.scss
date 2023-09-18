@@ -6,6 +6,10 @@
 @import 'commentBlock';
 @import 'footerBlock';
 
+.cartBlock__shoppingItem {
+    max-width: 652px;
+}
+
 .shoppingItem {
     display: flex;
     max-width: 652px;
@@ -14,6 +18,10 @@
 
     &:first-child {
         margin-bottom: 40px;
+    }
+
+    &:last-child {
+        margin-bottom: 72px;
     }
 
     &__image {
@@ -62,4 +70,15 @@
         background-color: transparent;
         border: none;
     }
+}
+
+.shoppingControls__wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+}
+
+.shoppingControls__btn {
+    padding: 17px 40px;
+    border: 1px solid $grayDark;
 }

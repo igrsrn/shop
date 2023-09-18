@@ -371,6 +371,10 @@ summary::-webkit-details-marker {
   color: #000000;
 }
 
+.cartBlock__shoppingItem {
+  max-width: 652px;
+}
+
 .shoppingItem {
   display: flex;
   max-width: 652px;
@@ -379,6 +383,9 @@ summary::-webkit-details-marker {
 }
 .shoppingItem:first-child {
   margin-bottom: 40px;
+}
+.shoppingItem:last-child {
+  margin-bottom: 72px;
 }
 .shoppingItem__image {
   max-width: 262px;
@@ -423,4 +430,15 @@ summary::-webkit-details-marker {
   align-items: center;
   background-color: transparent;
   border: none;
+}
+
+.shoppingControls__wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 72px;
+}
+
+.shoppingControls__btn {
+  padding: 17px 40px;
+  border: 1px solid #4D4D4D;
 }/*# sourceMappingURL=cartStyle.css.map */
