@@ -82,7 +82,7 @@
         </div>
     </section>
     <div class="cartBlock center">
-        <cartBlock__wrap>
+        <div class="cartBlock__wrap">
             <div class="cartBlock__shoppingItem">
                 <div class="shoppingItem">
                     <div class="shoppingItem__image">
@@ -125,19 +125,25 @@
             </div>
             <div class="cartBlock__contactForm">
                 <h3 class="cartBlock__contactTitle">SHIPPING ADRESS</h3>
-                <form>
-                    <input type="text" name="" id="" placeholder="Bangladesh">
-                    <input type="text" name="" id="" placeholder="State">
-                    <input type="number" name="" id="" placeholder="postcode/Zip">
-                    <button type="submit">GET A QUOTE</button>
+                <form class="cartBlock__formBlock">
+                    <div>
+                        <input class="cartBlock__city" type="text" name="" id="" placeholder="Bangladesh">
+                    </div>
+                    <div>
+                        <input class="cartBlock__state" type="text" name="" id="" placeholder="State">
+                    </div>
+                    <div>
+                        <input class="cartBlock__postOffice" type="number" name="" id="" placeholder="postcode/Zip">
+                    </div>
+                    <button class="cartBlock__formBtn" type="submit">GET A QUOTE</button>
                 </form>
-                <div class="total">
-                    <p>SUB TOTAL $900</p>
-                    <p>GRAND TOTAL <span>$900</span></p>
-                    <button>PROCEED TO CHECKOUT</button>
+                <div class="cartBlock__total">
+                    <p class="cartBlock__totalText">SUB TOTAL <span class="cartBlock__totalSum">$900</span></p>
+                    <p class="cartBlock__totalText last">GRAND TOTAL <span class="cartBlock__totalSum pink">$900</span></p>
+                    <button class="cartBlock__orderBtn">PROCEED TO CHECKOUT</button>
                 </div>
             </div>
-        </cartBlock__wrap>
+        </div>
     </div>
     <div class="comments__background">
         <div class="comment__glow">

@@ -8,6 +8,117 @@
 
 .cartBlock {
     padding: 96px 0 128px;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__contactForm {
+        margin-bottom: 20px;
+        width: 360px;
+    }
+
+    &__contactTitle {
+        @include fontStyle(19px, 16px, 300);
+        margin-bottom: 20px;
+    }
+
+    &__formBlock {
+        margin-bottom: 57px;
+    }
+
+    &__city, &__state {
+        margin-bottom: 20px;
+    }
+
+    &__postOffice {
+        margin-bottom: 23px;
+    }
+
+    &__city::-webkit-input-placeholder {
+        color: $grayLight;
+    }
+
+    &__city::-moz-placeholder {
+        color: $grayLight;
+    }
+
+    &__state::-webkit-input-placeholder {
+        color: $blackColor;
+    }
+
+    &__state::-moz-placeholder {
+        color: $blackColor;
+    }
+
+    &__postOffice::-webkit-input-placeholder {
+        color: $blackColor;
+    }
+
+    &__postOffice::-moz-placeholder {
+        color: $blackColor;
+    }
+
+    &__city, &__state, &__postOffice {
+        width: 100%;
+        padding: 13px 17px 16px;
+    }
+
+    &__formBtn {
+        width: 107px;
+        padding: 10px 15px;
+        display: flex;
+        @include fontStyle(13px, 11px, 300);
+        background-color: transparent;
+        border: 1px solid $grayLight;
+        transition-duration: .7s;
+        border: none;
+        border-radius: 15px;
+        outline: 1px solid $gray;
+
+        &:hover {
+            background-color: $redText;
+            color: $whiteColor;
+            outline: none;
+        }
+    }
+
+    &__total {
+        padding: 39px 34px 42px 44px;
+        background-color: $whiteGray;
+        text-align: right;
+
+        &Text:first-child {
+            @include fontStyle(13px, 11px, 400);
+            margin-bottom: 12px;
+        }
+
+        &Text:last-child {
+            @include fontStyle(19px, 16px, 700);
+            margin-bottom: 23px;
+        }
+
+        &Sum {
+            margin-left: 10px;
+            display: inline-block;
+
+            &:last-child {
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__orderBtn {
+        display: block;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: none;
+        background-color: $redText;
+        color: $whiteColor;
+        border-radius: 25px;
+    }
 }
 
 .cartBlock__shoppingItem {
@@ -37,7 +148,7 @@
     }
 
     &__descr {
-        padding: 22px 31px 62px;
+        padding: 22px 97px 31px 62px;
         width: 100%;
         position: relative;
     }
@@ -46,6 +157,7 @@
         @include fontStyle(28px, 24px, 400);
         color: $blackColor;
         margin-bottom: 42px;
+        min-width: 211px;
     }
 
     &__infoList {
@@ -84,13 +196,29 @@
 
 .shoppingControls__btn {
     padding: 17px 40px;
-    border: 1px solid $gray;
+    border: none;
+    outline: 1px solid $gray;
     background-color: transparent;
     @include fontStyle(16px, 14px, 300);
+    border-radius: 25px;
     transition-duration: .7s;
 
     &:hover {
         background-color: $redText;
         color: $whiteColor;
+        outline: none
+    }
+}
+
+.last {
+    @include fontStyle(19px, 16px, 700);
+    padding-bottom: 23px;
+
+    &::after {
+        padding-top: 23px;
+        content: "";
+        border-bottom: 1px solid $gray;
+        display: block;
+        width: 100%;
     }
 }
