@@ -1,0 +1,448 @@
+@import 'baseStyle';
+@import 'mixins';
+@import 'vars';
+@import 'headerBlock';
+@import 'navBarBlock';
+
+.catalog__block {
+    padding: 51px 0 96px;
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 64px;
+    }
+
+    &-filter {
+        @include fontStyle(16px, 14px, 600);
+        color: $blackColor;
+    }
+
+    &-box {
+        width: 360px;
+        position: relative;
+
+        &[open] > .catalog__block-title {
+            color: $redText;
+            position: relative;
+            z-index: 2;
+            top: 13px;
+            left: 16px;
+            &::after {
+                color: $redText;
+                content: url(../img/filter__icon-red.svg);
+            }
+        }
+    }
+
+    &-option {
+        display: flex;
+        gap: 28px;
+    }
+
+    &-title {
+        &::after {
+            content: url(../img/filter__icon.svg);
+            margin-left: 11px;
+        } 
+    }
+
+    &-innerMenu {
+        position: absolute;
+        width: 363px;
+        padding: 45px 16px 17px 17px;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #FFF;
+        filter: drop-shadow(6px 4px 35px rgba(0, 0, 0, 0.21));
+    }
+
+    &-itemWrap:not(:last-child) {
+        margin-bottom: 18px;
+    }
+
+    &-item {
+        border-left: 5px solid $redText;
+        border-bottom: 1px solid #EBEBEB;
+        padding: 11px;
+    }
+
+    &-filterList {
+        padding-top: 12px;
+        padding-left: 17px;
+    }
+
+    &-filterItem:not(:last-child) {
+        margin-bottom: 11px;
+    }
+
+    &-filterLink {
+        @include fontStyle(16px, 14px, 400);
+        color: $grayLight;
+    }
+}
+
+.option__block {
+    position: relative;
+}
+
+.option__size {
+    position: absolute;
+    top: 23px;
+    left: -7px;
+    padding: 7px 9px 11px;
+    z-index: 1;
+    width: 79px;
+    background-color: #FFFFFF;
+    box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+}
+
+.option__item {
+    display: flex;
+    gap: 9px;
+    @include fontStyle(16px, 14px, 400);
+    color: $grayDark;
+    font-family: 'Roboto';
+
+    &:not(:last-child) {
+        margin-bottom: 6px;
+    }
+}
+
+.option__title {
+    @include fontStyle(16px, 14px, 400);
+    color: $grayLight;
+
+    &::after {
+        content: url(../img/arrow-down.svg);
+        margin-left: 10px;
+    }
+}
+
+.catalogPagination {
+    @include widthAndHeight(284px, 44px);
+    margin: 0 auto;
+    border: 1px solid #ebebeb;
+    padding: 13px 16px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 3px;
+
+    &-link {
+        @include fontStyle(19px, 16px, 300);
+        color: $grayLight;
+        
+
+        &:hover {
+            color: $redText;
+            font-weight: 700;
+        }
+    }
+
+    &-active {
+        color: $redText;
+    }
+}
+
+.goods {
+    padding-top: 65px;
+    padding-bottom: 60px;
+
+    &__block {
+        text-align: center;
+    }
+
+    &__info {
+        margin-bottom: 48px;
+    }
+
+    &__item:hover .good__img {
+        filter: brightness(40%);
+    }
+
+    &__item:hover .hover__btn {
+        transform: scale(1);
+    }
+
+    &__title {
+        margin-bottom: 6px;
+        @include fontStyle(36px, 30px, 400);
+        color: $blackColor;
+    }
+
+    &__subtitle {
+        @include fontStyle(16px, 14px, 400);
+        color: $grayLight;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-bottom: 48px;
+    }
+}
+
+.category {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 96px;
+
+    &__item {
+        position: relative;
+        @include flex();
+        text-align: center;
+
+        &:hover .category__img {
+            filter: brightness(40%);
+        }
+
+        // &:hover .good__img {
+        //     filter: brightness(40%);
+        // }
+    }
+
+    &__img {
+        width: 100%;
+        transition-duration: .7s;
+        border-radius: 15px;
+    }
+
+    &__description {
+        position: absolute;
+    }
+}
+
+.full {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.white {
+    @include fontStyle(19px, 16px, 400);
+    color: $whiteColor;
+}
+
+.big {
+    @include fontStyle(28px, 24px, 700);
+}
+
+.good__top {
+    position: relative;
+    @include flex();
+}
+
+.good__img {
+    display: flex;
+    width: 100%;
+    transition-duration: .7s;
+    border-radius: 10px 10px 0 0;
+}
+
+.hover__btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 11px;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    background-color: rgba(237, 18, 117, 0.6);
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    transform: scale(0);
+    transition-duration: .7s;
+    border-radius: 15px;
+}
+
+.good__info__text {
+    padding: 24px 19px 16px;
+    background-color: #f8f8f8;
+    text-align: left;
+    border-radius: 0 0 10px 10px;
+}
+
+.good__title {
+    margin-bottom: 16px;
+    @include fontStyle(15px, 13px, 400);
+    color: $blackColor;
+}
+
+.good__descr {
+    @include fontStyle(16px, 14px, 300);
+    color: $grayLight;
+    margin-bottom: 16px;
+}
+
+.good__price {
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.show__products {
+    border: 1px solid $redText;
+    padding: 15px 40px;
+    @include fontStyle(19px, 16px, 400);
+    border-radius: 15px;
+    color: $redText;
+    transition-duration: .7s;
+}
+
+.show__products:hover {
+    background-color: #F26376;
+    color: #FFFFFF;
+}
+
+.benefits__block {
+    background-color: #222224;
+    padding-top: 103px;
+    padding-bottom: 103px;
+}
+
+.benefits__parent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefits__item {
+    max-width: 340px;
+    text-align: center;
+}
+
+.benefits__img {
+    margin-bottom: 28px;
+    @include widthAndHeight(40px, 40px);
+}
+
+.benefits__title {
+    @include fontStyle(23px, 19px, 400);
+    color: $whiteColor;
+    margin-bottom: 16px;
+}
+
+.benefits__text {
+    @include fontStyle(16px, 13px, 300);
+    color: $whiteColor;
+}
+
+.comments__background {
+    background-image: url(../img/subscribe__background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.comment__glow {
+    min-height: 448px;
+    background-color: rgba(244, 244, 244, 0.6);
+    padding-top: 97px;
+    padding-bottom: 126px;
+    box-sizing: border-box;
+}
+
+.comment__parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user {
+    text-align: center;
+    max-width: 360px;
+}
+
+.comment__text {
+    margin-top: 30px;
+    @include fontStyle(24px, 20px, 400);
+}
+
+.italic__comment {
+    font-style: italic;
+}
+
+.subscribe__info {
+    text-align: center;
+    align-self: flex-end;
+}
+
+.subscribe__text-block {
+    margin-bottom: 32px;
+}
+
+.subscribe__title {
+    @include fontStyle(40px, 24px, 700);
+}
+
+.subscribe__text {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    @include fontStyle(30px, 18px, 400);
+}
+
+.subscribe {
+    display: flex;
+}
+
+.email {
+    padding: 10px 20px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    @include fontStyle(16px, 14px, 400);
+    border-radius: 20px 0 0 20px;
+    border: none;
+    background-color: #E1E1E1;
+    color: #222224;
+}
+
+.form__btn {
+    padding: 10px 10px;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    background-color: #F16D7F;
+    color: #FFFFFF;
+    @include fontStyle(16px, 14px, 400);
+}
+
+.footer {
+    background-color: #222224;
+    padding: 24px 0;
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.copyright {
+    line-height: 19px;
+    color: #FBFBFB;
+}
+
+.social-network__list {
+    display: flex;
+    gap: 7px;
+}
+
+.social-network__link {
+    @include widthAndHeight(32px, 32px);
+    @include flex();
+    background-color: #FFFFFF;
+    transition-duration: .7s;
+    border-radius: 7px;
+}
+
+.social-network__link:hover {
+    background-color: #F16D7F;
+    fill: #FFFFFF;
+}
+
+.fab {
+    color: #000000;
+}
